@@ -36,7 +36,7 @@
     "release": "bun run changelog && bunx bumpp package.json --all",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "prepare": "simple-git-hooks"
+    "prepare": "bunx simple-git-hooks"
   },
   "peerDependencies": {
     "@prettier/plugin-xml": "^3.4.1",

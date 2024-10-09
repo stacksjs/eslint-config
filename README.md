@@ -5,7 +5,7 @@
 - Optimized for Stacks usage
 - Auto fix for formatting (aimed to be used standalone **without** Prettier)
 - Reasonable defaults, best practices, only one line of config
-- Designed to work with TypeScript, JSX, Vue, JSON, YAML, Toml, Markdown, etc. out-of-the-box.
+- Designed to work with TypeScript, JSX, Stacks, JSON, YAML, Toml, Markdown, etc. out-of-the-box.
 - Opinionated, but [very customizable](#customization)
 - [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), compose easily!
 - Optional [formatters](#formatters) support for formatting CSS, HTML, XML, etc.
@@ -28,9 +28,9 @@ And create `eslint.config.js` in your project root:
 
 ```js
 // eslint.config.js
-import antfu from '@stacksjs/eslint-config'
+import stacks from '@stacksjs/eslint-config'
 
-export default antfu()
+export default stacks()
 ```
 
 <details>
@@ -277,10 +277,10 @@ import stacks from '@stacksjs/eslint-config'
 
 export default stacks(
   {
-    // Configures for stacks's config
+    // Configure this config
   },
 
-  // From the second arguments they are ESLint Flat Configs
+  // This second argument defines the ESLint Flat configuration
   // you can have multiple configs
   {
     files: ['**/*.ts'],
@@ -480,36 +480,6 @@ export default antfu()
 // ...
 ```
 
-### Vue
-
-Vue support is detected automatically by checking if `vue` is installed in your project. You can also explicitly enable/disable it:
-
-```js
-// eslint.config.js
-import stacks from '@stacksjs/eslint-config'
-
-export default stacks({
-  vue: true
-})
-```
-
-#### Vue 2
-
-We have limited support for Vue 2 (as it's already [reached EOL](https://v2.vuejs.org/eol/)). If you are still using Vue 2, you can configure it manually by setting `vueVersion` to `2`:
-
-```js
-// eslint.config.js
-import stacks from '@stacksjs/eslint-config'
-
-export default stacks({
-  vue: {
-    vueVersion: 2
-  },
-})
-```
-
-As it's in maintenance mode, we only accept bug fixes for Vue 2. It might also be removed in the future when `eslint-plugin-vue` drops support for Vue 2. We recommend upgrading to Vue 3 if possible.
-
 ### Optional Configs
 
 We provide some optional configs for specific use cases, that we don't include their dependencies by default.
@@ -625,7 +595,7 @@ If you want to apply lint and auto-fix before every commit, you can add the foll
 ```json
 {
   "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
+    "pre-commit": "bunx lint-staged"
   },
   "lint-staged": {
     "*": "bunx --bun eslint --fix"
@@ -636,10 +606,10 @@ If you want to apply lint and auto-fix before every commit, you can add the foll
 and then
 
 ```bash
-npm i -D lint-staged simple-git-hooks
+bun i -D lint-staged simple-git-hooks
 
 // to active the hooks
-npx simple-git-hooks
+bunx simple-git-hooks
 ```
 
 ## View what rules are enabled
@@ -649,7 +619,7 @@ I built a visual tool to help you view what rules are enabled in your project an
 Go to your project root that contains `eslint.config.js` and run:
 
 ```bash
-npx @eslint/config-inspector
+bunx @eslint/config-inspector
 ```
 
 ## Versioning Policy
