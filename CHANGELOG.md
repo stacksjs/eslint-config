@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v3.7.3-stacks-1.2...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v3.7.3-stacks-1.2...main)
+
+### 🏡 Chore
+
+- Disables/scripts for build and actions ([752fd06](https://github.com/stacksjs/eslint-config/commit/752fd06))
+
+### ❤️ Contributors
+
+- Chris <chrisbreuer93@gmail.com>
+
 ## v3.7.3-stacks-1.1...main
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v3.7.3-stacks-1.1...main)
