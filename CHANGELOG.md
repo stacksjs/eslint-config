@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v3.7.3-stacks-1.0...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v3.7.3-stacks-1.0...main)
+
+### 🏡 Chore
+
+- Use test script ([db3372e](https://github.com/stacksjs/eslint-config/commit/db3372e))
+- Add typegen.d.ts ([b3d83c6](https://github.com/stacksjs/eslint-config/commit/b3d83c6))
+- Adjust install instructions ([674a1da](https://github.com/stacksjs/eslint-config/commit/674a1da))
+- Build dist ([e1fa77b](https://github.com/stacksjs/eslint-config/commit/e1fa77b))
+- Several minor adjustments ([b4315ad](https://github.com/stacksjs/eslint-config/commit/b4315ad))
+
+### ❤️ Contributors
+
+- Chris <chrisbreuer93@gmail.com>
+
 ## v3.7.3-stacks-1...v3.7.3-stacks-1
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v3.7.3-stacks-1...v3.7.3-stacks-1)
