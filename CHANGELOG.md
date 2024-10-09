@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v3.7.3-stacks-1.3...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v3.7.3-stacks-1.3...main)
+
+### 🚀 Enhancements
+
+- Add `stacks/disables/cloud-no-new` ([0ae0dce](https://github.com/stacksjs/eslint-config/commit/0ae0dce))
+
+### ❤️ Contributors
+
+- Chris <chrisbreuer93@gmail.com>
+
 ## v3.7.3-stacks-1.2...main
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v3.7.3-stacks-1.2...main)
