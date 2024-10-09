@@ -55,5 +55,12 @@ export async function disables(): Promise<TypedFlatConfigItem[]> {
         'ts/explicit-function-return-type': 'off',
       },
     },
+    {
+      files: [`**/cloud/${GLOB_SRC}`],
+      name: 'stacks/disables/cloud-no-new',
+      rules: {
+        'no-new': 'off',
+      },
+    },
   ]
 }
