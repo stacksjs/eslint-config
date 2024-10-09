@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v3.7.3-stacks-1.4...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v3.7.3-stacks-1.4...main)
+
+### 🏡 Chore
+
+- Add buddy to `antfu/disables/cli` ([d7d46db](https://github.com/stacksjs/eslint-config/commit/d7d46db))
+- Ignore `**/framework/cache` ([5f457e1](https://github.com/stacksjs/eslint-config/commit/5f457e1))
+
+### ❤️ Contributors
+
+- Chris <chrisbreuer93@gmail.com>
+
 ## v3.7.3-stacks-1.3...main
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v3.7.3-stacks-1.3...main)
