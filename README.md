@@ -21,7 +21,7 @@
 Setting up is simple:
 
 ```bash
-pnpm i -D eslint @stacksjs/eslint-config
+bun i -D eslint @stacksjs/eslint-config
 ```
 
 And create `eslint.config.js` in your project root:
