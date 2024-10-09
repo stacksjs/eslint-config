@@ -50,9 +50,10 @@ export const GLOB_ALL_SRC = [
 ]
 
 export const GLOB_EXCLUDE = [
-  '**/cdk.out',
-  '**/framework/server',
   '**/.vite-ssg-temp',
+  '**/cdk.out',
+  '**/framework/cache',
+  '**/framework/server',
 
   '**/node_modules',
   '**/dist',
