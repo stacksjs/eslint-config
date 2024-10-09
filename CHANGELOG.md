@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v3.7.3-stacks-1.1...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v3.7.3-stacks-1.1...main)
+
+### 🚀 Enhancements
+
+- Add bunfig ([45093be](https://github.com/stacksjs/eslint-config/commit/45093be))
+
+### ❤️ Contributors
+
+- Chris <chrisbreuer93@gmail.com>
+
 ## v3.7.3-stacks-1.0...main
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v3.7.3-stacks-1.0...main)
