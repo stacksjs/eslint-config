@@ -5,7 +5,7 @@ import { GLOB_SRC, GLOB_SRC_EXT } from '../globs'
 export async function disables(): Promise<TypedFlatConfigItem[]> {
   return [
     {
-      files: [`**/scripts/${GLOB_SRC}`],
+      files: [`**/scripts/${GLOB_SRC}`, `**/build.ts`, `**/actions/${GLOB_SRC}`],
       name: 'antfu/disables/scripts',
       rules: {
         'antfu/no-top-level-await': 'off',
