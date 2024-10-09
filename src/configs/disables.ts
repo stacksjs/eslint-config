@@ -14,7 +14,7 @@ export async function disables(): Promise<TypedFlatConfigItem[]> {
       },
     },
     {
-      files: [`**/cli/${GLOB_SRC}`, `**/cli.${GLOB_SRC_EXT}`],
+      files: [`**/cli/${GLOB_SRC}`, `**/cli.${GLOB_SRC_EXT}`, `**/buddy/${GLOB_SRC}`],
       name: 'antfu/disables/cli',
       rules: {
         'antfu/no-top-level-await': 'off',
