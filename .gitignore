@@ -83,4 +83,5 @@ _fixtures
 .temp
 .history
 
+src/typegen.d.ts
 .eslint-config-inspector
