@@ -1,13 +1,13 @@
-# @antfu/eslint-config
+# @stacksjs/eslint-config
 
-[![npm](https://img.shields.io/npm/v/@antfu/eslint-config?color=444&label=)](https://npmjs.com/package/@antfu/eslint-config) [![code style](https://antfu.me/badge-code-style.svg)](https://github.com/antfu/eslint-config)
+[![npm](https://img.shields.io/npm/v/@stacksjs/eslint-config?color=444&label=)](https://npmjs.com/package/@stacksjs/eslint-config) [![code style](https://antfu.me/badge-code-style.svg)](https://github.com/antfu/eslint-config)
 
+- Optimized for Stacks usage
 - Auto fix for formatting (aimed to be used standalone **without** Prettier)
 - Reasonable defaults, best practices, only one line of config
-- Designed to work with TypeScript, JSX, Vue, JSON, YAML, Toml, Markdown, etc. Out-of-box.
+- Designed to work with TypeScript, JSX, Vue, JSON, YAML, Toml, Markdown, etc. out-of-the-box.
 - Opinionated, but [very customizable](#customization)
 - [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), compose easily!
-- Optional [React](#react), [Svelte](#svelte), [UnoCSS](#unocss), [Astro](#astro), [Solid](#solid) support
 - Optional [formatters](#formatters) support for formatting CSS, HTML, XML, etc.
 - **Style principle**: Minimal for reading, stable for diff, consistent
   - Sorted imports, dangling commas
@@ -16,41 +16,19 @@
 - Respects `.gitignore` by default
 - Requires ESLint v9.5.0+
 
-> [!NOTE]
-> Since v1.0.0, this config is rewritten to the new [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), check the [release note](https://github.com/antfu/eslint-config/releases/tag/v1.0.0) for more details.
->
-> Since v3.0.0, ESLint v9.5.0+ is now required.
-
-> [!WARNING]
-> I am super appreciated and even a bit flatted that so many of you are fond of using this config. For that, I tried to make it as flexible and customizable as possible to fit more use cases.
->
-> However, please keep in mind that this is still **_a personal config_** with a lot opinions. Changes might not always be pleased by everyone and every use cases.
->
-> If you are using this config directly, I'd suggest you **review the changes everytime you update**. Or if you want more control over the rules, always feel free to fork it. Thanks!
-
 ## Usage
 
-### Starter Wizard
-
-We provided a CLI tool to help you set up your project, or migrate from the legacy config to the new flat config with one command.
+Setting up is simple:
 
 ```bash
-pnpm dlx @antfu/eslint-config@latest
+pnpm i -D eslint @stacksjs/eslint-config
 ```
 
-### Manual Install
-
-If you prefer to set up manually:
-
-```bash
-pnpm i -D eslint @antfu/eslint-config
-```
-
-And create `eslint.config.mjs` in your project root:
+And create `eslint.config.js` in your project root:
 
 ```js
-// eslint.config.mjs
-import antfu from '@antfu/eslint-config'
+// eslint.config.js
+import antfu from '@stacksjs/eslint-config'
 
 export default antfu()
 ```
@@ -63,13 +41,13 @@ Combined with legacy config:
 If you still use some configs from the legacy eslintrc format, you can use the [`@eslint/eslintrc`](https://www.npmjs.com/package/@eslint/eslintrc) package to convert them to the flat config.
 
 ```js
-// eslint.config.mjs
-import antfu from '@antfu/eslint-config'
 import { FlatCompat } from '@eslint/eslintrc'
+// eslint.config.mjs
+import stacks from '@stacksjs/eslint-config'
 
 const compat = new FlatCompat()
 
-export default antfu(
+export default stacks(
   {
     ignores: [],
   },
@@ -97,8 +75,8 @@ For example:
 ```json
 {
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint": "bunx --bun eslint .",
+    "lint:fix": "bunx --bun eslint . --fix"
   }
 }
 ```
@@ -143,9 +121,7 @@ Add the following settings to your `.vscode/settings.json`:
   // Enable eslint for all supported languages
   "eslint.validate": [
     "javascript",
-    "javascriptreact",
     "typescript",
-    "typescriptreact",
     "vue",
     "html",
     "markdown",
@@ -156,8 +132,6 @@ Add the following settings to your `.vscode/settings.json`:
     "xml",
     "gql",
     "graphql",
-    "astro",
-    "svelte",
     "css",
     "less",
     "scss",
@@ -196,10 +170,8 @@ lspconfig.eslint.setup(
   {
     filetypes = {
       "javascript",
-      "javascriptreact",
       "javascript.jsx",
       "typescript",
-      "typescriptreact",
       "typescript.tsx",
       "vue",
       "html",
@@ -211,8 +183,6 @@ lspconfig.eslint.setup(
       "xml",
       "gql",
       "graphql",
-      "astro",
-      "svelte",
       "css",
       "less",
       "scss",
@@ -255,22 +225,22 @@ lspconfig.eslint.setup({
 
 Since v1.0, we migrated to [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new). It provides much better organization and composition.
 
-Normally you only need to import the `antfu` preset:
+Normally you only need to import the `stacks` preset:
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import stacks from '@stacksjs/eslint-config'
 
-export default antfu()
+export default stacks()
 ```
 
 And that's it! Or you can configure each integration individually, for example:
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import stacks from '@stacksjs/eslint-config'
 
-export default antfu({
+export default stacks({
 // Type of the project. 'lib' for libraries, the default is 'app'
   type: 'lib',
 
@@ -299,15 +269,15 @@ export default antfu({
 })
 ```
 
-The `antfu` factory function also accepts any number of arbitrary custom config overrides:
+The `stacks` factory function also accepts any number of arbitrary custom config overrides:
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import stacks from '@stacksjs/eslint-config'
 
-export default antfu(
+export default stacks(
   {
-    // Configures for antfu's config
+    // Configures for stacks's config
   },
 
   // From the second arguments they are ESLint Flat Configs
@@ -349,7 +319,7 @@ import {
   unicorn,
   vue,
   yaml,
-} from '@antfu/eslint-config'
+} from '@stacksjs/eslint-config'
 
 export default combine(
   ignores(),
@@ -414,9 +384,9 @@ Since v2.9.0, this preset will automatically rename the plugins also for your cu
 If you really want to use the original prefix, you can revert the plugin renaming by:
 
 ```ts
-import antfu from '@antfu/eslint-config'
+import stacks from '@stacksjs/eslint-config'
 
-export default antfu()
+export default stacks()
   .renamePlugins({
     ts: '@typescript-eslint',
     yaml: 'yml',
@@ -433,9 +403,9 @@ Certain rules would only be enabled in specific files, for example, `ts/*` rules
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import stacks from '@stacksjs/eslint-config'
 
-export default antfu(
+export default stacks(
   {
     vue: true,
     typescript: true
@@ -460,9 +430,9 @@ We also provided the `overrides` options in each integration to make it easier:
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import stacks from '@stacksjs/eslint-config'
 
-export default antfu({
+export default stacks({
   vue: {
     overrides: {
       'vue/operator-linebreak': ['error', 'before'],
@@ -487,7 +457,7 @@ Since v2.10.0, the factory function `antfu()` returns a [`FlatConfigComposer` ob
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import antfu from '@stacksjs/eslint-config'
 
 export default antfu()
   .prepend(
@@ -516,9 +486,9 @@ Vue support is detected automatically by checking if `vue` is installed in your 
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import stacks from '@stacksjs/eslint-config'
 
-export default antfu({
+export default stacks({
   vue: true
 })
 ```
@@ -529,9 +499,9 @@ We have limited support for Vue 2 (as it's already [reached EOL](https://v2.vuej
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import stacks from '@stacksjs/eslint-config'
 
-export default antfu({
+export default stacks({
   vue: {
     vueVersion: 2
   },
@@ -550,9 +520,9 @@ Use external formatters to format files that ESLint cannot handle yet (`.css`, `
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import stacks from '@stacksjs/eslint-config'
 
-export default antfu({
+export default stacks({
   formatters: {
     /**
      * Format CSS, LESS, SCSS files, also the `<style>` blocks in Vue
@@ -578,101 +548,6 @@ Running `npx eslint` should prompt you to install the required dependencies, oth
 
 ```bash
 npm i -D eslint-plugin-format
-```
-
-#### React
-
-To enable React support, you need to explicitly turn it on:
-
-```js
-// eslint.config.js
-import antfu from '@antfu/eslint-config'
-
-export default antfu({
-  react: true,
-})
-```
-
-Running `npx eslint` should prompt you to install the required dependencies, otherwise, you can install them manually:
-
-```bash
-npm i -D @eslint-react/eslint-plugin eslint-plugin-react-hooks eslint-plugin-react-refresh
-```
-
-#### Svelte
-
-To enable svelte support, you need to explicitly turn it on:
-
-```js
-// eslint.config.js
-import antfu from '@antfu/eslint-config'
-
-export default antfu({
-  svelte: true,
-})
-```
-
-Running `npx eslint` should prompt you to install the required dependencies, otherwise, you can install them manually:
-
-```bash
-npm i -D eslint-plugin-svelte
-```
-
-#### Astro
-
-To enable astro support, you need to explicitly turn it on:
-
-```js
-// eslint.config.js
-import antfu from '@antfu/eslint-config'
-
-export default antfu({
-  astro: true,
-})
-```
-
-Running `npx eslint` should prompt you to install the required dependencies, otherwise, you can install them manually:
-
-```bash
-npm i -D eslint-plugin-astro
-```
-
-#### Solid
-
-To enable Solid support, you need to explicitly turn it on:
-
-```js
-// eslint.config.js
-import antfu from '@antfu/eslint-config'
-
-export default antfu({
-  solid: true,
-})
-```
-
-Running `npx eslint` should prompt you to install the required dependencies, otherwise, you can install them manually:
-
-```bash
-npm i -D eslint-plugin-solid
-```
-
-#### UnoCSS
-
-To enable UnoCSS support, you need to explicitly turn it on:
-
-```js
-// eslint.config.js
-import antfu from '@antfu/eslint-config'
-
-export default antfu({
-  unocss: true,
-})
-```
-
-Running `npx eslint` should prompt you to install the required dependencies, otherwise, you can install them manually:
-
-```bash
-npm i -D @unocss/eslint-plugin
 ```
 
 ### Optional Rules
@@ -719,9 +594,9 @@ You can optionally enable the [type aware rules](https://typescript-eslint.io/li
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import stacks from '@stacksjs/eslint-config'
 
-export default antfu({
+export default stacks({
   typescript: {
     tsconfigPath: 'tsconfig.json',
   },
@@ -736,9 +611,9 @@ This is to prevent unused imports from getting removed by the IDE during refacto
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import stacks from '@stacksjs/eslint-config'
 
-export default antfu({
+export default stacks({
   isInEditor: false
 })
 ```
@@ -753,7 +628,7 @@ If you want to apply lint and auto-fix before every commit, you can add the foll
     "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
-    "*": "eslint --fix"
+    "*": "bunx --bun eslint --fix"
   }
 }
 ```
@@ -829,9 +704,9 @@ I am a very opinionated person, so as this config. I prefer the top-level functi
 I know they are not necessarily the popular opinions. If you really want to get rid of them, you can disable them with:
 
 ```ts
-import antfu from '@antfu/eslint-config'
+import stacks from '@stacksjs/eslint-config'
 
-export default antfu({
+export default stacks({
   lessOpinionated: true
 })
 ```

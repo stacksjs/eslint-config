@@ -9,63 +9,76 @@ on:
     branches:
       - main
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
 jobs:
   lint:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v2
 
-      - name: Set node
-        uses: actions/setup-node@v4
+      - name: Use cached node_modules
+        uses: actions/cache@v4
         with:
-          node-version: lts/*
+          path: node_modules
+          key: node-modules-${{ hashFiles('**/bun.lockb') }}
+          restore-keys: |
+            node-modules-
 
-      - name: Setup
-        run: npm i -g @antfu/ni
-
-      - name: Install
-        run: nci
-
-      - name: Build
-        run: nr build
+      - name: Install Dependencies
+        run: bun install
 
       - name: Lint
-        run: nr lint
+        run: bun run lint
 
-      - name: Typecheck
-        run: nr typecheck
-
-  test:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        node: [lts/*]
-        os: [ubuntu-latest, windows-latest, macos-latest]
-      fail-fast: false
+  typecheck:
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v2
 
-      - name: Set node ${{ matrix.node }}
-        uses: actions/setup-node@v4
+      - name: Use cached node_modules
+        uses: actions/cache@v4
         with:
-          node-version: ${{ matrix.node }}
+          path: node_modules
+          key: node-modules-${{ hashFiles('**/bun.lockb') }}
+          restore-keys: |
+            node-modules-
 
-      - name: Setup
-        run: npm i -g @antfu/ni
+      - name: Install Dependencies
+        run: bun install
 
-      - name: Install
-        run: nci
+      - name: Typecheck
+        run: bun --bun run typecheck
 
-      - name: Build
-        run: nr build
+  test:
+    runs-on: ubuntu-latest
 
-      - name: Test
-        run: nr test
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Use cached node_modules
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('**/bun.lockb') }}
+          restore-keys: |
+            node-modules-
+
+      - name: Install Dependencies
+        run: bun install
+
+      - name: Unit Test
+        run: bun test

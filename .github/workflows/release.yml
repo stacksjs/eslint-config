@@ -1,4 +1,4 @@
-name: Release
+name: CI
 
 on:
   push:
@@ -7,18 +7,34 @@ on:
 
 jobs:
   release:
-    permissions:
-      contents: write
+    name: release
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v2
 
-      - run: npx changelogithub
+      - name: Use cached node_modules
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('**/bun.lockb') }}
+          restore-keys: |
+            node-modules-
+
+      - name: Install Dependencies
+        run: bun install
+
+      - name: Publish to npm
+        run: bun publish --access public
+        env:
+          BUN_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+      - name: Create GitHub release
+        run: bunx changelogithub
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

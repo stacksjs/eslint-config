@@ -4,7 +4,7 @@ import type { Linter } from 'eslint'
 import type { FlatGitignoreOptions } from 'eslint-config-flat-gitignore'
 import type { Options as VueBlocksOptions } from 'eslint-processor-vue-blocks'
 import type { ConfigNames, RuleOptions } from './typegen'
-import type { VendoredPrettierOptions } from './vender/prettier-types'
+import type { VendoredPrettierOptions } from './vendor/prettier-types'
 
 export type Awaitable<T> = T | Promise<T>
 
@@ -12,7 +12,10 @@ export type Rules = RuleOptions
 
 export type { ConfigNames }
 
-export type TypedFlatConfigItem = Omit<Linter.Config<Linter.RulesRecord & Rules>, 'plugins'> & {
+export type TypedFlatConfigItem = Omit<
+  Linter.Config<Linter.RulesRecord & Rules>,
+  'plugins'
+> & {
   // Relax plugins type limitation, as most of the plugins did not have correct type info yet.
   /**
    * An object containing a name-value mapping of plugin names to plugin objects. When `files` is specified, these plugins are only available to the matching files.
@@ -47,7 +50,7 @@ export interface OptionsVue extends OptionsOverrides {
 }
 
 export type OptionsTypescript =
-  (OptionsTypeScriptWithTypes & OptionsOverrides)
+  | (OptionsTypeScriptWithTypes & OptionsOverrides)
   | (OptionsTypeScriptParserOptions & OptionsOverrides)
 
 export interface OptionsFormatters {
@@ -112,16 +115,11 @@ export interface OptionsFormatters {
    *
    * Only works when `markdown` is enabled with `prettier`.
    */
-  slidev?: boolean | {
-    files?: string[]
-  }
-
-  /**
-   * Enable formatting support for Astro.
-   *
-   * Currently only support Prettier.
-   */
-  astro?: 'prettier' | boolean
+  slidev?:
+    | boolean
+    | {
+      files?: string[]
+    }
 }
 
 export interface OptionsComponentExts {
@@ -184,8 +182,10 @@ export interface OptionsStylistic {
 }
 
 export interface StylisticConfig
-  extends Pick<StylisticCustomizeOptions, 'indent' | 'quotes' | 'jsx' | 'semi'> {
-}
+  extends Pick<
+    StylisticCustomizeOptions,
+    'indent' | 'quotes' | 'jsx' | 'semi'
+  > { }
 
 export interface OptionsOverrides {
   overrides?: TypedFlatConfigItem['rules']
@@ -224,7 +224,9 @@ export interface OptionsUnoCSS extends OptionsOverrides {
   strict?: boolean
 }
 
-export interface OptionsConfig extends OptionsComponentExts, OptionsProjectType {
+export interface OptionsConfig
+  extends OptionsComponentExts,
+  OptionsProjectType {
   /**
    * Enable gitignore support.
    *
@@ -312,19 +314,6 @@ export interface OptionsConfig extends OptionsComponentExts, OptionsProjectType 
   toml?: boolean | OptionsOverrides
 
   /**
-   * Enable ASTRO support.
-   *
-   * Requires installing:
-   * - `eslint-plugin-astro`
-   *
-   * Requires installing for formatting .astro:
-   * - `prettier-plugin-astro`
-   *
-   * @default false
-   */
-  astro?: boolean | OptionsOverrides
-
-  /**
    * Enable linting for **code snippets** in Markdown.
    *
    * For formatting Markdown content, enable also `formatters.markdown`.
@@ -348,37 +337,6 @@ export interface OptionsConfig extends OptionsComponentExts, OptionsProjectType 
    * @default true
    */
   regexp?: boolean | (OptionsRegExp & OptionsOverrides)
-
-  /**
-   * Enable react rules.
-   *
-   * Requires installing:
-   * - `@eslint-react/eslint-plugin`
-   * - `eslint-plugin-react-hooks`
-   * - `eslint-plugin-react-refresh`
-   *
-   * @default false
-   */
-  react?: boolean | OptionsOverrides
-  /**
-   * Enable solid rules.
-   *
-   * Requires installing:
-   * - `eslint-plugin-solid`
-   *
-   * @default false
-   */
-  solid?: boolean | OptionsOverrides
-
-  /**
-   * Enable svelte rules.
-   *
-   * Requires installing:
-   * - `eslint-plugin-svelte`
-   *
-   * @default false
-   */
-  svelte?: boolean
 
   /**
    * Enable unocss rules.
@@ -430,7 +388,5 @@ export interface OptionsConfig extends OptionsComponentExts, OptionsProjectType 
     markdown?: TypedFlatConfigItem['rules']
     yaml?: TypedFlatConfigItem['rules']
     toml?: TypedFlatConfigItem['rules']
-    react?: TypedFlatConfigItem['rules']
-    svelte?: TypedFlatConfigItem['rules']
   }
 }

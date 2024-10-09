@@ -21,8 +21,6 @@ runWithConfig('js', {
 runWithConfig('all', {
   typescript: true,
   vue: true,
-  svelte: true,
-  astro: true,
 })
 runWithConfig('no-style', {
   typescript: true,
@@ -79,7 +77,6 @@ runWithConfig(
   {
     typescript: true,
     vue: true,
-    astro: true,
     formatters: true,
   },
 )
@@ -109,7 +106,7 @@ function runWithConfig(name: string, configs: OptionsConfig, ...items: TypedFlat
     })
     await fs.writeFile(join(target, 'eslint.config.js'), `
 // @eslint-disable
-import antfu from '@antfu/eslint-config'
+import antfu from '@stacksjs/eslint-config'
 
 export default antfu(
   ${JSON.stringify(configs)},

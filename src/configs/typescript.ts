@@ -9,7 +9,7 @@ import type {
 } from '../types'
 
 import process from 'node:process'
-import { GLOB_ASTRO_TS, GLOB_MARKDOWN, GLOB_TS, GLOB_TSX } from '../globs'
+import { GLOB_MARKDOWN, GLOB_TS, GLOB_TSX } from '../globs'
 import { pluginAntfu } from '../plugins'
 import { interopDefault, renameRules } from '../utils'
 
@@ -33,7 +33,6 @@ export async function typescript(
   const filesTypeAware = options.filesTypeAware ?? [GLOB_TS, GLOB_TSX]
   const ignoresTypeAware = options.ignoresTypeAware ?? [
     `${GLOB_MARKDOWN}/**`,
-    GLOB_ASTRO_TS,
   ]
   const tsconfigPath = options?.tsconfigPath
     ? options.tsconfigPath

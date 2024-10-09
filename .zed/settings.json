@@ -1,0 +1,58 @@
+{
+  "languages": {
+    "JavaScript": {
+      "formatter": "language_server",
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "TypeScript": {
+      "formatter": "language_server",
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "Markdown": {
+      "formatter": "language_server",
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "JSON": {
+      "formatter": "language_server",
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "JSONC": {
+      "formatter": "language_server",
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "Vue.js": {
+      "formatter": "language_server",
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "HTML": {
+      "formatter": "language_server",
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "YAML": {
+      "formatter": "language_server",
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "TOML": {
+      "formatter": "language_server",
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    }
+  }
+}
