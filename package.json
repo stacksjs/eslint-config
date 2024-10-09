@@ -32,7 +32,8 @@
     "lint:fix": "bunx --bun eslint . --fix",
     "typegen": "bun scripts/typegen.ts",
     "prepack": "bun run build",
-    "release": "bumpp && bun publish --access public",
+    "changelog": "bunx changelogen --output CHANGELOG.md",
+    "release": "bun run changelog && bunx bumpp package.json --all",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks"
