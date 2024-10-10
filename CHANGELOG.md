@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v3.7.3-stacks-1.6...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v3.7.3-stacks-1.6...main)
+
+### 🏡 Chore
+
+- Set perfectionist env to bun ([e5a9d61](https://github.com/stacksjs/eslint-config/commit/e5a9d61))
+
+### ❤️ Contributors
+
+- Chris <chrisbreuer93@gmail.com>
+
 ## v3.7.3-stacks-1.5...main
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v3.7.3-stacks-1.5...main)
