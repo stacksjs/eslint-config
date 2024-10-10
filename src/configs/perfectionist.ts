@@ -17,10 +17,10 @@ export async function perfectionist(): Promise<TypedFlatConfigItem[]> {
       rules: {
         'perfectionist/sort-exports': ['error', { order: 'asc', type: 'natural' }],
         'perfectionist/sort-imports': ['error', {
+          environment: 'bun',
           groups: [
             'type',
             ['parent-type', 'sibling-type', 'index-type'],
-
             'builtin',
             'external',
             ['internal', 'internal-type'],
