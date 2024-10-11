@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v3.7.3-stacks-1.9...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v3.7.3-stacks-1.9...main)
+
+### 🏡 Chore
+
+- Remove unused `@ts-expect-error` ([5bce0b7](https://github.com/stacksjs/eslint-config/commit/5bce0b7))
+
+### ❤️ Contributors
+
+- Chris <chrisbreuer93@gmail.com>
+
 ## v3.7.3-stacks-1.8...main
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v3.7.3-stacks-1.8...main)
