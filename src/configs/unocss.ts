@@ -11,13 +11,13 @@ export async function unocss(
   } = options
 
   await ensurePackages([
-    '@stacksjs/eslint-plugin',
+    '@unocss/eslint-plugin',
   ])
 
   const [
     pluginUnoCSS,
   ] = await Promise.all([
-    interopDefault(import('@stacksjs/eslint-plugin')),
+    interopDefault(import('@unocss/eslint-plugin')),
   ] as const)
 
   return [
