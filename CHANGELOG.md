@@ -1,6 +1,10 @@
 # Changelog
 
 
+## v3.7.3-stacks-1.7...v3.7.3-stacks-1.7
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v3.7.3-stacks-1.7...v3.7.3-stacks-1.7)
+
 ## v3.7.3-stacks-1.6...main
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v3.7.3-stacks-1.6...main)

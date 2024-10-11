@@ -1,7 +1,7 @@
 {
   "name": "@stacksjs/eslint-config",
   "type": "module",
-  "version": "3.7.3-stacks-1.7",
+  "version": "3.7.3-stacks-1.8",
   "description": "Anthony's ESLint config",
   "author": "Anthony Fu <anthonyfu117@hotmail.com> (https://github.com/antfu/)",
   "license": "MIT",
@@ -39,30 +39,13 @@
     "prepare": "bunx simple-git-hooks"
   },
   "peerDependencies": {
-    "@prettier/plugin-xml": "^3.4.1",
-    "@unocss/eslint-plugin": ">=0.50.0",
-    "eslint": "^9.10.0",
-    "eslint-plugin-format": ">=0.1.0",
-    "prettier-plugin-slidev": "^1.0.5"
-  },
-  "peerDependenciesMeta": {
-    "@prettier/plugin-xml": {
-      "optional": true
-    },
-    "@unocss/eslint-plugin": {
-      "optional": true
-    },
-    "eslint-plugin-format": {
-      "optional": true
-    },
-    "prettier-plugin-slidev": {
-      "optional": true
-    }
+    "eslint": "^9.10.0"
   },
   "dependencies": {
     "@antfu/install-pkg": "^0.4.1",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.0",
     "@eslint/markdown": "^6.1.0",
+    "@stacksjs/eslint-plugin": ">=0.64.0",
     "@stylistic/eslint-plugin": "^2.8.0",
     "@typescript-eslint/eslint-plugin": "^8.7.0",
     "@typescript-eslint/parser": "^8.7.0",
