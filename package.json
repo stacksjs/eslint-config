@@ -23,7 +23,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "bun run typegen && tsup --format esm --clean --dts",
+    "build": "bunx tsup --format esm --clean --dts",
     "stub": "tsup --format esm",
     "dev": "bunx @eslint/config-inspector --config eslint.config.js",
     "build:inspector": "bun run build && bunx @eslint/config-inspector build",
@@ -45,7 +45,7 @@
     "@antfu/install-pkg": "^0.4.1",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.0",
     "@eslint/markdown": "^6.1.0",
-    "@stacksjs/eslint-plugin": ">=0.64.0",
+    "@stacksjs/eslint-plugin": "^0.65.0",
     "@stylistic/eslint-plugin": "^2.8.0",
     "@typescript-eslint/eslint-plugin": "^8.7.0",
     "@typescript-eslint/parser": "^8.7.0",
@@ -84,7 +84,6 @@
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.7.3",
     "@typescript-eslint/utils": "^8.7.0",
-    "@unocss/eslint-plugin": "^0.62.4",
     "bumpp": "^9.5.2",
     "eslint": "^9.11.1",
     "eslint-plugin-format": "^0.1.2",
