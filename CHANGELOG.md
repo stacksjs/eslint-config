@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v3.7.3-stacks-1.8...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v3.7.3-stacks-1.8...main)
+
+### 🏡 Chore
+
+- Wip ([3d866cf](https://github.com/stacksjs/eslint-config/commit/3d866cf))
+
+### ❤️ Contributors
+
+- Chris <chrisbreuer93@gmail.com>
+
 ## v3.7.3-stacks-1.7...v3.7.3-stacks-1.7
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v3.7.3-stacks-1.7...v3.7.3-stacks-1.7)
