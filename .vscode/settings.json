@@ -34,5 +34,12 @@
     "yaml",
     "toml",
     "xml"
+  ],
+  "cSpell.words": [
+    "bumpp",
+    "slidev",
+    "stacksjs",
+    "typecheck",
+    "unocss"
   ]
 }
