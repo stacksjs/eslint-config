@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v3.7.3-stacks-1.11...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v3.7.3-stacks-1.11...main)
+
+### 🏡 Chore
+
+- Add peer deps ([df3bfd6](https://github.com/stacksjs/eslint-config/commit/df3bfd6))
+
+### ❤️ Contributors
+
+- Chris <chrisbreuer93@gmail.com>
+
 ## v3.7.3-stacks-1.10...main
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v3.7.3-stacks-1.10...main)
