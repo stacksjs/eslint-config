@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/@stacksjs/eslint-config?color=444&label=)](https://npmjs.com/package/@stacksjs/eslint-config) [![code style](https://antfu.me/badge-code-style.svg)](https://github.com/antfu/eslint-config)
 
-- Optimized for Stacks usage
+- Optimized for Stacks _(and Bun)_ usage
 - Auto fix for formatting (aimed to be used standalone **without** Prettier)
 - Reasonable defaults, best practices, only one line of config
 - Designed to work with TypeScript, JSX, Stacks, JSON, YAML, Toml, Markdown, etc. out-of-the-box.
