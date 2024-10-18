@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v3.8.1-beta.1...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v3.8.1-beta.1...main)
+
+### 🏡 Chore
+
+- Wip ([84c450a](https://github.com/stacksjs/eslint-config/commit/84c450a))
+
+### ❤️ Contributors
+
+- Chris <chrisbreuer93@gmail.com>
+
 ## v3.7.3-stacks-1.12...main
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v3.7.3-stacks-1.12...main)
