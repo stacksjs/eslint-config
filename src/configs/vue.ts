@@ -18,7 +18,7 @@ export async function vue(
     files = [GLOB_VUE],
     overrides = {},
     stylistic = true,
-    vueVersion = 3,
+    // vueVersion = 3,
   } = options
 
   const sfcBlocks = options.sfcBlocks === true
@@ -96,18 +96,9 @@ export async function vue(
         ]),
       rules: {
         ...pluginVue.configs.base.rules as any,
-
-        ...vueVersion === 2
-          ? {
-              ...pluginVue.configs.essential.rules as any,
-              ...pluginVue.configs['strongly-recommended'].rules as any,
-              ...pluginVue.configs.recommended.rules as any,
-            }
-          : {
-              ...pluginVue.configs['vue3-essential'].rules as any,
-              ...pluginVue.configs['vue3-strongly-recommended'].rules as any,
-              ...pluginVue.configs['vue3-recommended'].rules as any,
-            },
+        ...pluginVue.configs['vue3-essential'].rules as any,
+        ...pluginVue.configs['vue3-strongly-recommended'].rules as any,
+        ...pluginVue.configs['vue3-recommended'].rules as any,
 
         'antfu/no-top-level-await': 'off',
         'node/prefer-global/process': 'off',
