@@ -1,6 +1,29 @@
 # Changelog
 
 
+## v3.7.3-stacks-1.12...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v3.7.3-stacks-1.12...main)
+
+### 🚀 Enhancements
+
+- Support json5 in vscode ([#623](https://github.com/stacksjs/eslint-config/pull/623))
+- Update deps ([e5e79c5](https://github.com/stacksjs/eslint-config/commit/e5e79c5))
+
+### 🏡 Chore
+
+- Update react-hooks to v5 ([#624](https://github.com/stacksjs/eslint-config/pull/624))
+- Release v3.8.0 ([b06dbdb](https://github.com/stacksjs/eslint-config/commit/b06dbdb))
+- Update readme ([3d2fdaf](https://github.com/stacksjs/eslint-config/commit/3d2fdaf))
+- Updates ([4162ade](https://github.com/stacksjs/eslint-config/commit/4162ade))
+
+### ❤️ Contributors
+
+- Chris <chrisbreuer93@gmail.com>
+- Anthony Fu <github@antfu.me>
+- CJ ([@w3cj](http://github.com/w3cj))
+- Zzxming ([@zzxming](http://github.com/zzxming))
+
 ## v3.7.3-stacks-1.11...main
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v3.7.3-stacks-1.11...main)
