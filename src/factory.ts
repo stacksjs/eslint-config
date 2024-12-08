@@ -210,8 +210,7 @@ export function stacks(
   }
 
   if (enableVue) {
-    configs.push(
-      vue({
+      configs.push(vue({
         ...resolveSubOptions(options, 'vue'),
         overrides: getOverrides(options, 'vue'),
         stylistic: stylisticOptions,
