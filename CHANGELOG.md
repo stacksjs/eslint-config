@@ -1,6 +1,124 @@
 # Changelog
 
 
+## v3.11.2...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v3.11.2...main)
+
+### 🚀 Enhancements
+
+- Adjust for stacks usage ([aba6e88](https://github.com/stacksjs/eslint-config/commit/aba6e88))
+- Add bunfig ([45093be](https://github.com/stacksjs/eslint-config/commit/45093be))
+- Add `stacks/disables/cloud-no-new` ([0ae0dce](https://github.com/stacksjs/eslint-config/commit/0ae0dce))
+
+### 🏡 Chore
+
+- Adjust release script ([62abf70](https://github.com/stacksjs/eslint-config/commit/62abf70))
+- Release v3.7.3-stacks-1 ([d851376](https://github.com/stacksjs/eslint-config/commit/d851376))
+- Release v3.7.3-stacks-1.0 ([b47f477](https://github.com/stacksjs/eslint-config/commit/b47f477))
+- Use test script ([db3372e](https://github.com/stacksjs/eslint-config/commit/db3372e))
+- Add typegen.d.ts ([b3d83c6](https://github.com/stacksjs/eslint-config/commit/b3d83c6))
+- Adjust install instructions ([674a1da](https://github.com/stacksjs/eslint-config/commit/674a1da))
+- Build dist ([e1fa77b](https://github.com/stacksjs/eslint-config/commit/e1fa77b))
+- Several minor adjustments ([b4315ad](https://github.com/stacksjs/eslint-config/commit/b4315ad))
+- Release v3.7.3-stacks-1.1 ([24df21a](https://github.com/stacksjs/eslint-config/commit/24df21a))
+- Release v3.7.3-stacks-1.2 ([243e7c1](https://github.com/stacksjs/eslint-config/commit/243e7c1))
+- Disables/scripts for build and actions ([752fd06](https://github.com/stacksjs/eslint-config/commit/752fd06))
+- Release v3.7.3-stacks-1.3 ([75d9c22](https://github.com/stacksjs/eslint-config/commit/75d9c22))
+- Release v3.7.3-stacks-1.4 ([845ed80](https://github.com/stacksjs/eslint-config/commit/845ed80))
+- Add buddy to `antfu/disables/cli` ([d7d46db](https://github.com/stacksjs/eslint-config/commit/d7d46db))
+- Ignore `**/framework/cache` ([5f457e1](https://github.com/stacksjs/eslint-config/commit/5f457e1))
+- Release v3.7.3-stacks-1.5 ([71d98a8](https://github.com/stacksjs/eslint-config/commit/71d98a8))
+- Adjust stacks rules ([0a6ad69](https://github.com/stacksjs/eslint-config/commit/0a6ad69))
+- Release v3.7.3-stacks-1.6 ([79a0685](https://github.com/stacksjs/eslint-config/commit/79a0685))
+- Set perfectionist env to bun ([e5a9d61](https://github.com/stacksjs/eslint-config/commit/e5a9d61))
+- Release v3.7.3-stacks-1.6 ([ba7168e](https://github.com/stacksjs/eslint-config/commit/ba7168e))
+- Release v3.7.3-stacks-1.7 ([0f7a5ab](https://github.com/stacksjs/eslint-config/commit/0f7a5ab))
+- Release v3.7.3-stacks-1.8 ([1723f6c](https://github.com/stacksjs/eslint-config/commit/1723f6c))
+- Wip ([3d866cf](https://github.com/stacksjs/eslint-config/commit/3d866cf))
+- Release v3.7.3-stacks-1.9 ([2807d8d](https://github.com/stacksjs/eslint-config/commit/2807d8d))
+- Remove unused `@ts-expect-error` ([5bce0b7](https://github.com/stacksjs/eslint-config/commit/5bce0b7))
+- Release v3.7.3-stacks-1.10 ([39e7f36](https://github.com/stacksjs/eslint-config/commit/39e7f36))
+- Wip ([c9ff4cf](https://github.com/stacksjs/eslint-config/commit/c9ff4cf))
+- Wip ([3f0eebe](https://github.com/stacksjs/eslint-config/commit/3f0eebe))
+- Wip ([7f7413b](https://github.com/stacksjs/eslint-config/commit/7f7413b))
+- Release v3.7.3-stacks-1.11 ([9a8cbbc](https://github.com/stacksjs/eslint-config/commit/9a8cbbc))
+- Add peer deps ([df3bfd6](https://github.com/stacksjs/eslint-config/commit/df3bfd6))
+- Release v3.7.3-stacks-1.12 ([4e98fe6](https://github.com/stacksjs/eslint-config/commit/4e98fe6))
+- Update readme ([3d2fdaf](https://github.com/stacksjs/eslint-config/commit/3d2fdaf))
+- Updates ([4162ade](https://github.com/stacksjs/eslint-config/commit/4162ade))
+- Release v3.8.1-beta.1 ([bcf4425](https://github.com/stacksjs/eslint-config/commit/bcf4425))
+- Wip ([84c450a](https://github.com/stacksjs/eslint-config/commit/84c450a))
+- Release v3.8.1-beta.2 ([f6a5405](https://github.com/stacksjs/eslint-config/commit/f6a5405))
+- Add renovate config ([551bede](https://github.com/stacksjs/eslint-config/commit/551bede))
+- Merge upstream changes ([2040182](https://github.com/stacksjs/eslint-config/commit/2040182))
+- Temp remove unocss/eslint-plugin ([151d0bb](https://github.com/stacksjs/eslint-config/commit/151d0bb))
+- Wip ([ec4d83c](https://github.com/stacksjs/eslint-config/commit/ec4d83c))
+- Get install running ([d9ed463](https://github.com/stacksjs/eslint-config/commit/d9ed463))
+
+### ❤️ Contributors
+
+- Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
+
+## v3.11.2...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v3.11.2...main)
+
+### 🚀 Enhancements
+
+- Adjust for stacks usage ([aba6e88](https://github.com/stacksjs/eslint-config/commit/aba6e88))
+- Add bunfig ([45093be](https://github.com/stacksjs/eslint-config/commit/45093be))
+- Add `stacks/disables/cloud-no-new` ([0ae0dce](https://github.com/stacksjs/eslint-config/commit/0ae0dce))
+
+### 🏡 Chore
+
+- Adjust release script ([62abf70](https://github.com/stacksjs/eslint-config/commit/62abf70))
+- Release v3.7.3-stacks-1 ([d851376](https://github.com/stacksjs/eslint-config/commit/d851376))
+- Release v3.7.3-stacks-1.0 ([b47f477](https://github.com/stacksjs/eslint-config/commit/b47f477))
+- Use test script ([db3372e](https://github.com/stacksjs/eslint-config/commit/db3372e))
+- Add typegen.d.ts ([b3d83c6](https://github.com/stacksjs/eslint-config/commit/b3d83c6))
+- Adjust install instructions ([674a1da](https://github.com/stacksjs/eslint-config/commit/674a1da))
+- Build dist ([e1fa77b](https://github.com/stacksjs/eslint-config/commit/e1fa77b))
+- Several minor adjustments ([b4315ad](https://github.com/stacksjs/eslint-config/commit/b4315ad))
+- Release v3.7.3-stacks-1.1 ([24df21a](https://github.com/stacksjs/eslint-config/commit/24df21a))
+- Release v3.7.3-stacks-1.2 ([243e7c1](https://github.com/stacksjs/eslint-config/commit/243e7c1))
+- Disables/scripts for build and actions ([752fd06](https://github.com/stacksjs/eslint-config/commit/752fd06))
+- Release v3.7.3-stacks-1.3 ([75d9c22](https://github.com/stacksjs/eslint-config/commit/75d9c22))
+- Release v3.7.3-stacks-1.4 ([845ed80](https://github.com/stacksjs/eslint-config/commit/845ed80))
+- Add buddy to `antfu/disables/cli` ([d7d46db](https://github.com/stacksjs/eslint-config/commit/d7d46db))
+- Ignore `**/framework/cache` ([5f457e1](https://github.com/stacksjs/eslint-config/commit/5f457e1))
+- Release v3.7.3-stacks-1.5 ([71d98a8](https://github.com/stacksjs/eslint-config/commit/71d98a8))
+- Adjust stacks rules ([0a6ad69](https://github.com/stacksjs/eslint-config/commit/0a6ad69))
+- Release v3.7.3-stacks-1.6 ([79a0685](https://github.com/stacksjs/eslint-config/commit/79a0685))
+- Set perfectionist env to bun ([e5a9d61](https://github.com/stacksjs/eslint-config/commit/e5a9d61))
+- Release v3.7.3-stacks-1.6 ([ba7168e](https://github.com/stacksjs/eslint-config/commit/ba7168e))
+- Release v3.7.3-stacks-1.7 ([0f7a5ab](https://github.com/stacksjs/eslint-config/commit/0f7a5ab))
+- Release v3.7.3-stacks-1.8 ([1723f6c](https://github.com/stacksjs/eslint-config/commit/1723f6c))
+- Wip ([3d866cf](https://github.com/stacksjs/eslint-config/commit/3d866cf))
+- Release v3.7.3-stacks-1.9 ([2807d8d](https://github.com/stacksjs/eslint-config/commit/2807d8d))
+- Remove unused `@ts-expect-error` ([5bce0b7](https://github.com/stacksjs/eslint-config/commit/5bce0b7))
+- Release v3.7.3-stacks-1.10 ([39e7f36](https://github.com/stacksjs/eslint-config/commit/39e7f36))
+- Wip ([c9ff4cf](https://github.com/stacksjs/eslint-config/commit/c9ff4cf))
+- Wip ([3f0eebe](https://github.com/stacksjs/eslint-config/commit/3f0eebe))
+- Wip ([7f7413b](https://github.com/stacksjs/eslint-config/commit/7f7413b))
+- Release v3.7.3-stacks-1.11 ([9a8cbbc](https://github.com/stacksjs/eslint-config/commit/9a8cbbc))
+- Add peer deps ([df3bfd6](https://github.com/stacksjs/eslint-config/commit/df3bfd6))
+- Release v3.7.3-stacks-1.12 ([4e98fe6](https://github.com/stacksjs/eslint-config/commit/4e98fe6))
+- Update readme ([3d2fdaf](https://github.com/stacksjs/eslint-config/commit/3d2fdaf))
+- Updates ([4162ade](https://github.com/stacksjs/eslint-config/commit/4162ade))
+- Release v3.8.1-beta.1 ([bcf4425](https://github.com/stacksjs/eslint-config/commit/bcf4425))
+- Wip ([84c450a](https://github.com/stacksjs/eslint-config/commit/84c450a))
+- Release v3.8.1-beta.2 ([f6a5405](https://github.com/stacksjs/eslint-config/commit/f6a5405))
+- Add renovate config ([551bede](https://github.com/stacksjs/eslint-config/commit/551bede))
+- Merge upstream changes ([2040182](https://github.com/stacksjs/eslint-config/commit/2040182))
+- Temp remove unocss/eslint-plugin ([151d0bb](https://github.com/stacksjs/eslint-config/commit/151d0bb))
+- Wip ([ec4d83c](https://github.com/stacksjs/eslint-config/commit/ec4d83c))
+- Get install running ([d9ed463](https://github.com/stacksjs/eslint-config/commit/d9ed463))
+
+### ❤️ Contributors
+
+- Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
+
 ## v3.8.1-beta.1...main
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v3.8.1-beta.1...main)
