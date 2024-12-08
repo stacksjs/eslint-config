@@ -1,7 +1,7 @@
 {
   "name": "@stacksjs/eslint-config",
   "type": "module",
-  "version": "3.11.3-beta.1",
+  "version": "3.11.3-beta.2",
   "packageManager": "pnpm@9.14.2",
   "description": "Stacks ESLint config",
   "author": "Anthony Fu <anthonyfu117@hotmail.com> (https://github.com/antfu/)",

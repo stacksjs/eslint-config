@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v3.11.3-beta.1...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v3.11.3-beta.1...main)
+
+### 🏡 Chore
+
+- Lint ([0c91acf](https://github.com/stacksjs/eslint-config/commit/0c91acf))
+
+### ❤️ Contributors
+
+- Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
+
 ## v3.11.2...main
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v3.11.2...main)
