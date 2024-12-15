@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v3.12.0-beta.1...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v3.12.0-beta.1...main)
+
+### 🏡 Chore
+
+- Use unstable_ts_config ([e8f5908](https://github.com/stacksjs/eslint-config/commit/e8f5908))
+
+### ❤️ Contributors
+
+- Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
+
 ## v3.11.3-beta.4...main
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v3.11.3-beta.4...main)
