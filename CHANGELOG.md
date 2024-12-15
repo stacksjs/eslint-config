@@ -1,6 +1,32 @@
 # Changelog
 
 
+## v3.11.3-beta.4...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v3.11.3-beta.4...main)
+
+### 🚀 Enhancements
+
+- Update `@eslint-react/eslint-plugin` to ^1.19.0 ([#642](https://github.com/stacksjs/eslint-config/pull/642))
+- Update deps ([f28536b](https://github.com/stacksjs/eslint-config/commit/f28536b))
+
+### 🏡 Chore
+
+- Remove bin ([7b8be2d](https://github.com/stacksjs/eslint-config/commit/7b8be2d))
+- Release v3.12.0 ([642a9c2](https://github.com/stacksjs/eslint-config/commit/642a9c2))
+- Adjust prepare ([50b3987](https://github.com/stacksjs/eslint-config/commit/50b3987))
+- Update lock file ([5e19984](https://github.com/stacksjs/eslint-config/commit/5e19984))
+- Remove some bunx usage ([696549a](https://github.com/stacksjs/eslint-config/commit/696549a))
+- Try npx ([90422fe](https://github.com/stacksjs/eslint-config/commit/90422fe))
+- Use bun ([9199883](https://github.com/stacksjs/eslint-config/commit/9199883))
+- Learn bunx ([ef6ca33](https://github.com/stacksjs/eslint-config/commit/ef6ca33))
+
+### ❤️ Contributors
+
+- Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
+- Anthony Fu <github@antfu.me>
+- Eva1ent ([@Rel1cx](http://github.com/Rel1cx))
+
 ## v3.11.3-beta.3...v3.11.3-beta.3
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v3.11.3-beta.3...v3.11.3-beta.3)
