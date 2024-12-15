@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v3.12.0-beta.3...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v3.12.0-beta.3...main)
+
+### 🏡 Chore
+
+- Release v3.12.0-beta.3 ([b72567c](https://github.com/stacksjs/eslint-config/commit/b72567c))
+- Add ESLintConfig type export ([1d06b33](https://github.com/stacksjs/eslint-config/commit/1d06b33))
+
+### ❤️ Contributors
+
+- Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
+
 ## v3.12.0-beta.3...v3.12.0-beta.3
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v3.12.0-beta.3...v3.12.0-beta.3)
