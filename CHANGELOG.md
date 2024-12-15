@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v3.12.0-beta.2...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v3.12.0-beta.2...main)
+
+### 🏡 Chore
+
+- Export FlatConfigComposer type ([9c52655](https://github.com/stacksjs/eslint-config/commit/9c52655))
+
+### ❤️ Contributors
+
+- Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
+
 ## v3.12.0-beta.1...main
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v3.12.0-beta.1...main)
