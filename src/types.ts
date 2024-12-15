@@ -2,11 +2,13 @@ import type { StylisticCustomizeOptions } from '@stylistic/eslint-plugin'
 import type { ParserOptions } from '@typescript-eslint/parser'
 import type { Linter } from 'eslint'
 import type { FlatGitignoreOptions } from 'eslint-config-flat-gitignore'
+import type { FlatConfigComposer } from 'eslint-flat-config-utils'
 import type { Options as VueBlocksOptions } from 'eslint-processor-vue-blocks'
 import type { ConfigNames, RuleOptions } from './typegen'
 import type { VendoredPrettierOptions } from './vendor/prettier-types'
 
-export type { FlatConfigComposer } from 'eslint-flat-config-utils'
+export type ESLintConfig = FlatConfigComposer<TypedFlatConfigItem, ConfigNames>
+export type { FlatConfigComposer }
 
 export type Awaitable<T> = T | Promise<T>
 
