@@ -6,6 +6,8 @@ import type { Options as VueBlocksOptions } from 'eslint-processor-vue-blocks'
 import type { ConfigNames, RuleOptions } from './typegen'
 import type { VendoredPrettierOptions } from './vendor/prettier-types'
 
+export type { FlatConfigComposer } from 'eslint-flat-config-utils'
+
 export type Awaitable<T> = T | Promise<T>
 
 export type Rules = RuleOptions
