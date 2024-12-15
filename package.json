@@ -25,7 +25,7 @@
     "build": "tsup --format esm --clean --dts",
     "stub": "tsup --format esm",
     "dev": "bunx @eslint/config-inspector --config eslint.config.js",
-    "build:inspector": "bun run build && bun @eslint/config-inspector build",
+    "build:inspector": "bun run build && npx @eslint/config-inspector build",
     "watch": "tsup --format esm --watch",
     "lint": "bunx --bun eslint .",
     "lint:fix": "bunx --bun eslint . --fix",
