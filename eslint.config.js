@@ -7,9 +7,11 @@ export default stacks(
     formatters: true,
     type: 'lib',
   },
+
   {
     ignores: ['fixtures', '_fixtures'],
   },
+
   {
     files: ['src/**/*.ts'],
     rules: {
