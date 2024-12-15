@@ -6,6 +6,10 @@ export default stacks(
     typescript: true,
     formatters: true,
     type: 'lib',
+    stylistic: {
+      indent: 2,
+      quotes: 'single',
+    },
   },
 
   {

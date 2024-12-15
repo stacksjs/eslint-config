@@ -26,8 +26,8 @@
     "dev": "bunx @eslint/config-inspector --config eslint.config.js",
     "build:inspector": "bun run build && npx @eslint/config-inspector build",
     "watch": "tsup --format esm --watch",
-    "lint": "bunx --bun eslint .",
-    "lint:fix": "bunx --bun eslint . --fix",
+    "lint": "bunx --bun eslint --flag unstable_ts_config .",
+    "lint:fix": "bunx --bun eslint --flag unstable_ts_config . --fix",
     "typegen": "bun scripts/typegen.ts",
     "prepack": "bun run build",
     "changelog": "bunx changelogen --output CHANGELOG.md",
@@ -103,7 +103,7 @@
     "pre-commit": "bunx lint-staged"
   },
   "lint-staged": {
-    "*": "bunx --bun eslint --fix"
+    "*": "bunx --bun eslint --flag unstable_ts_config --fix"
   },
   "workspaces": [
     "fixtures/*"
