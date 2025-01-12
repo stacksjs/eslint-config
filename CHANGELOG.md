@@ -1,6 +1,33 @@
 # Changelog
 
 
+## v3.12.0-beta.4...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v3.12.0-beta.4...main)
+
+### 🚀 Enhancements
+
+- Update deps ([921c6fb](https://github.com/stacksjs/eslint-config/commit/921c6fb))
+- Support React Router 7 in react-refresh rules ([#652](https://github.com/stacksjs/eslint-config/pull/652))
+- **cli:** Add validation for svelte files ([#653](https://github.com/stacksjs/eslint-config/pull/653))
+
+### 🏡 Chore
+
+- Update deps ([d0cf22c](https://github.com/stacksjs/eslint-config/commit/d0cf22c))
+- Release v3.12.1 ([ac85b30](https://github.com/stacksjs/eslint-config/commit/ac85b30))
+- Update renovate config ([e8c9acc](https://github.com/stacksjs/eslint-config/commit/e8c9acc))
+- Release v3.12.2 ([de2d48d](https://github.com/stacksjs/eslint-config/commit/de2d48d))
+- Update deps ([a50f7d6](https://github.com/stacksjs/eslint-config/commit/a50f7d6))
+- Release v3.13.0 ([65fbbfb](https://github.com/stacksjs/eslint-config/commit/65fbbfb))
+- Dep updates ([f220ac2](https://github.com/stacksjs/eslint-config/commit/f220ac2))
+
+### ❤️ Contributors
+
+- Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
+- Anthony Fu <github@antfu.me>
+- 紫菜苔 <2037630@gmail.com>
+- Nicolas Bazille ([@oltodo](http://github.com/oltodo))
+
 ## v3.12.0-beta.3...main
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v3.12.0-beta.3...main)
