@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v3.13.1-beta.1...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v3.13.1-beta.1...main)
+
+### 🏡 Chore
+
+- Update stacksjs/eslint-plugin ([d3b1beb](https://github.com/stacksjs/eslint-config/commit/d3b1beb))
+
+### ❤️ Contributors
+
+- Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
+
 ## v3.12.0-beta.4...main
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v3.12.0-beta.4...main)
