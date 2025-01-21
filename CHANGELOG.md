@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v3.15.1-beta.2...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v3.15.1-beta.2...main)
+
+### 🚀 Enhancements
+
+- Dynamically load stacks auto imports ([28c4523](https://github.com/stacksjs/eslint-config/commit/28c4523))
+
+### ❤️ Contributors
+
+- Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
+
 ## v3.15.1-beta.1...v3.15.1-beta.1
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v3.15.1-beta.1...v3.15.1-beta.1)
