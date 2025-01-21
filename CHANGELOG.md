@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v3.15.1-beta.3...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v3.15.1-beta.3...main)
+
+### 🏡 Chore
+
+- Use console debug ([b65af38](https://github.com/stacksjs/eslint-config/commit/b65af38))
+
+### ❤️ Contributors
+
+- Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
+
 ## v3.15.1-beta.2...main
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v3.15.1-beta.2...main)
