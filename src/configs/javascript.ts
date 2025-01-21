@@ -1,8 +1,30 @@
 import type { OptionsIsInEditor, OptionsOverrides, TypedFlatConfigItem } from '../types'
-
+import { existsSync } from 'node:fs'
+import { join } from 'node:path'
 import globals from 'globals'
-
 import { pluginAntfu, pluginUnusedImports } from '../plugins'
+
+async function loadAutoImports() {
+  const globals: Record<string, true> = {}
+  const paths = [
+    './storage/framework/browser-auto-imports.json',
+    './storage/framework/server-auto-imports.json',
+  ]
+
+  for (const path of paths) {
+    if (existsSync(join(process.cwd(), path))) {
+      try {
+        const { globals: fileGlobals } = await import(path)
+        Object.assign(globals, fileGlobals)
+      }
+      catch (error) {
+        console.warn(`Failed to load auto-imports from ${path}:`, error)
+      }
+    }
+  }
+
+  return globals
+}
 
 export async function javascript(
   options: OptionsIsInEditor & OptionsOverrides = {},
@@ -12,6 +34,9 @@ export async function javascript(
     overrides = {},
   } = options
 
+  // Load auto-imports
+  const autoImportGlobals = await loadAutoImports()
+
   return [
     {
       languageOptions: {
@@ -20,6 +45,7 @@ export async function javascript(
           ...globals.browser,
           ...globals.es2021,
           ...globals.node,
+          ...autoImportGlobals,
           document: 'readonly',
           navigator: 'readonly',
           window: 'readonly',

@@ -7,11 +7,34 @@ import type {
   OptionsTypeScriptWithTypes,
   TypedFlatConfigItem,
 } from '../types'
-
+import { existsSync } from 'node:fs'
+import { join } from 'node:path'
 import process from 'node:process'
 import { GLOB_MARKDOWN, GLOB_TS, GLOB_TSX } from '../globs'
 import { pluginAntfu } from '../plugins'
 import { interopDefault, renameRules } from '../utils'
+
+async function loadAutoImports() {
+  const globals: Record<string, true> = {}
+  const paths = [
+    './storage/framework/browser-auto-imports.json',
+    './storage/framework/server-auto-imports.json',
+  ]
+
+  for (const path of paths) {
+    if (existsSync(join(process.cwd(), path))) {
+      try {
+        const { globals: fileGlobals } = await import(path)
+        Object.assign(globals, fileGlobals)
+      }
+      catch (error) {
+        console.warn(`Failed to load auto-imports from ${path}:`, error)
+      }
+    }
+  }
+
+  return globals
+}
 
 export async function typescript(
   options: OptionsFiles & OptionsComponentExts & OptionsOverrides & OptionsTypeScriptWithTypes & OptionsTypeScriptParserOptions & OptionsProjectType = {},
@@ -38,6 +61,9 @@ export async function typescript(
     ? options.tsconfigPath
     : undefined
   const isTypeAware = !!tsconfigPath
+
+  // Load auto-imports dynamically
+  const autoImportGlobals = await loadAutoImports()
 
   const typeAwareRules: TypedFlatConfigItem['rules'] = {
     'dot-notation': 'off',
@@ -76,6 +102,9 @@ export async function typescript(
       files,
       ...ignores ? { ignores } : {},
       languageOptions: {
+        globals: {
+          ...autoImportGlobals,
+        },
         parser: parserTs,
         parserOptions: {
           extraFileExtensions: componentExts.map(ext => `.${ext}`),
@@ -159,7 +188,6 @@ export async function typescript(
         'ts/no-wrapper-object-types': 'error',
         'ts/triple-slash-reference': 'off',
         'ts/unified-signatures': 'off',
-
         ...(type === 'lib'
           ? {
               'ts/explicit-function-return-type': ['error', {
