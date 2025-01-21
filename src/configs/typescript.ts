@@ -17,8 +17,8 @@ import { interopDefault, renameRules } from '../utils'
 async function loadAutoImports() {
   const globals: Record<string, true> = {}
   const paths = [
-    './storage/framework/browser-auto-imports.json',
-    './storage/framework/server-auto-imports.json',
+    '../../../../storage/framework/browser-auto-imports.json',
+    '../../../../storage/framework/server-auto-imports.json',
   ]
 
   for (const path of paths) {
@@ -28,7 +28,8 @@ async function loadAutoImports() {
         Object.assign(globals, fileGlobals)
       }
       catch (error) {
-        console.warn(`Failed to load auto-imports from ${path}:`, error)
+        // eslint-disable-next-line no-console
+        console.debug(`Failed to load auto-imports from ${path}:`, error)
       }
     }
   }
