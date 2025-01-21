@@ -1,6 +1,29 @@
 # Changelog
 
 
+## v3.13.1-beta.2...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v3.13.1-beta.2...main)
+
+### 🚀 Enhancements
+
+- Add recommended rules from @eslint-react/web-api ([#655](https://github.com/stacksjs/eslint-config/pull/655))
+- Turn off `prefer-const` in editor ([12dd5b5](https://github.com/stacksjs/eslint-config/commit/12dd5b5))
+
+### 🏡 Chore
+
+- Update deps ([c300e9c](https://github.com/stacksjs/eslint-config/commit/c300e9c))
+- Release v3.14.0 ([6c870da](https://github.com/stacksjs/eslint-config/commit/6c870da))
+- Update deps ([4c2867b](https://github.com/stacksjs/eslint-config/commit/4c2867b))
+- Release v3.15.0 ([d3a1022](https://github.com/stacksjs/eslint-config/commit/d3a1022))
+- Update deps ([c354ae3](https://github.com/stacksjs/eslint-config/commit/c354ae3))
+
+### ❤️ Contributors
+
+- Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
+- Anthony Fu <github@antfu.me>
+- Pavel Dubovitsky ([@p-dubovitsky](http://github.com/p-dubovitsky))
+
 ## v3.13.1-beta.1...main
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v3.13.1-beta.1...main)
