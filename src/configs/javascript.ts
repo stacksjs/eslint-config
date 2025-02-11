@@ -5,7 +5,7 @@ import process from 'node:process'
 import globals from 'globals'
 import { pluginAntfu, pluginUnusedImports } from '../plugins'
 
-async function loadAutoImports() {
+async function loadAutoImports(): Promise<any> {
   const globals: Record<string, true> = {}
   const paths = [
     '../../../../storage/framework/browser-auto-imports.json',

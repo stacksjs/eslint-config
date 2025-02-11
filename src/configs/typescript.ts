@@ -14,7 +14,7 @@ import { GLOB_MARKDOWN, GLOB_TS, GLOB_TSX } from '../globs'
 import { pluginAntfu } from '../plugins'
 import { interopDefault, renameRules } from '../utils'
 
-async function loadAutoImports() {
+async function loadAutoImports(): Promise<any> {
   const globals: Record<string, true> = {}
   const paths = [
     '../../../../storage/framework/browser-auto-imports.json',
