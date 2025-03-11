@@ -22,6 +22,7 @@ import {
   markdown,
   node,
   perfectionist,
+  pnpm,
   sortPackageJson,
   sortTsconfig,
   stylistic,
@@ -82,6 +83,7 @@ export function stacks(
     componentExts = [],
     gitignore: enableGitignore = true,
     jsx: enableJsx = true,
+    pnpm: enableCatalogs = false, // TODO: smart detect
     regexp: enableRegexp = true,
     typescript: enableTypeScript = isPackageExists('typescript'),
     unicorn: enableUnicorn = true,
@@ -238,6 +240,12 @@ export function stacks(
     )
   }
 
+  if (enableCatalogs) {
+    configs.push(
+      pnpm(),
+    )
+  }
+
   if (options.yaml ?? true) {
     configs.push(
       yaml({
@@ -320,7 +328,9 @@ export function resolveSubOptions<K extends keyof OptionsConfig>(
   options: OptionsConfig,
   key: K,
 ): ResolvedOptions<OptionsConfig[K]> {
-  return typeof options[key] === 'boolean' ? ({} as any) : options[key] || {}
+  return typeof options[key] === 'boolean'
+    ? {} as any
+    : options[key] || {} as any
 }
 
 export function getOverrides<K extends keyof OptionsConfig>(

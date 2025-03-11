@@ -548,7 +548,7 @@ const foo = async (msg: string): void => {
 }
 ```
 
-Will be transformed to this when you hit save with your editor or run `eslint . --fix`:
+Will be transformed to this when you hit save with your editor or run `eslint --fix`:
 
 ```ts
 async function foo(msg: string): void {
