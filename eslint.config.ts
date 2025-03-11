@@ -5,7 +5,6 @@ export default stacks(
     vue: true,
     typescript: true,
     formatters: true,
-    pnpm: true,
     type: 'lib',
     stylistic: {
       indent: 2,
