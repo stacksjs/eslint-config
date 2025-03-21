@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v4.10.2-beta.1...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v4.10.2-beta.1...main)
+
+### 🏡 Chore
+
+- Update deps ([12216d9](https://github.com/stacksjs/eslint-config/commit/12216d9))
+
+### ❤️ Contributors
+
+- Chris ([@chrisbbreuer](https://github.com/chrisbbreuer))
+
 ## v4.8.2-beta.2...v4.8.2-beta.2
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v4.8.2-beta.2...v4.8.2-beta.2)
