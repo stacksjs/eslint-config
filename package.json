@@ -41,7 +41,7 @@
     "@clack/prompts": "^0.10.0",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
     "@eslint/markdown": "^6.3.0",
-    "@stacksjs/eslint-plugin": "^0.2.3",
+    "@stacksjs/eslint-plugin": "^0.2.4",
     "@stylistic/eslint-plugin": "^4.2.0",
     "@typescript-eslint/eslint-plugin": "^8.27.0",
     "@typescript-eslint/parser": "^8.27.0",
