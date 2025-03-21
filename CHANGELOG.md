@@ -1,6 +1,10 @@
 # Changelog
 
 
+## v4.8.2-beta.2...v4.8.2-beta.2
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v4.8.2-beta.2...v4.8.2-beta.2)
+
 ## v4.10.1...main
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v4.10.1...main)
