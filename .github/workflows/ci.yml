@@ -20,6 +20,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # we need this while we use npx
+      - uses: actions/setup-node@v4
+
       - name: Install Bun
         uses: oven-sh/setup-bun@v2
 
@@ -27,7 +30,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: node_modules
-          key: node-modules-${{ hashFiles('**/bun.lockb') }}
+          key: node-modules-${{ hashFiles('**/bun.lock') }}
           restore-keys: |
             node-modules-
 
@@ -53,7 +56,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: node_modules
-          key: node-modules-${{ hashFiles('**/bun.lockb') }}
+          key: node-modules-${{ hashFiles('**/bun.lock') }}
           restore-keys: |
             node-modules-
 
@@ -79,7 +82,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: node_modules
-          key: node-modules-${{ hashFiles('**/bun.lockb') }}
+          key: node-modules-${{ hashFiles('**/bun.lock') }}
           restore-keys: |
             node-modules-
 

@@ -27,8 +27,8 @@
     "dev": "bunx @eslint/config-inspector --config eslint.config.js",
     "build:inspector": "bun run build && npx @eslint/config-inspector build",
     "watch": "tsdown --watch",
-    "lint": "bunx --bun eslint .",
-    "lint:fix": "bunx --bun eslint . --fix",
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint . --fix",
     "typegen": "bun scripts/typegen.ts",
     "prepack": "bun run build",
     "changelog": "bunx changelogen --output CHANGELOG.md",
@@ -64,6 +64,7 @@
     "eslint-plugin-unicorn": "^57.0.0",
     "eslint-plugin-unused-imports": "^4.1.4",
     "eslint-plugin-vue": "^10.1.0",
+    "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "eslint-plugin-yml": "^1.18.0",
     "eslint-processor-vue-blocks": "^2.0.0",
     "globals": "^16.1.0",
@@ -102,7 +103,7 @@
     "pre-commit": "bunx lint-staged"
   },
   "lint-staged": {
-    "*": "bunx --bun eslint --fix"
+    "*": "npx eslint . --fix"
   },
   "workspaces": [
     "fixtures/*"

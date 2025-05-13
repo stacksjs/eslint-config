@@ -655,7 +655,7 @@ If you want to apply lint and auto-fix before every commit, you can add the foll
     "pre-commit": "bunx lint-staged"
   },
   "lint-staged": {
-    "*": "bunx --bun eslint --fix"
+    "*": "bunx eslint --fix"
   }
 }
 ```
