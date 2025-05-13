@@ -22,7 +22,7 @@
   ],
   "scripts": {
     "build": "bun run gen && tsdown --clean --dts",
-    "gen": "bun scripts/typegen.ts && bun scripts/versiongen.ts",
+    "gen": "bun scripts/typegen.ts",
     "stub": "tsdown",
     "dev": "bunx @eslint/config-inspector --config eslint.config.js",
     "build:inspector": "bun run build && npx @eslint/config-inspector build",
