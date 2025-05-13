@@ -1,7 +1,7 @@
 {
   "name": "@stacksjs/eslint-config",
   "type": "module",
-  "version": "4.10.2-beta.3",
+  "version": "4.13.0",
   "description": "Stacks ESLint config",
   "author": "Anthony Fu <anthonyfu117@hotmail.com> (https://github.com/antfu/)",
   "license": "MIT",
@@ -21,11 +21,12 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup --clean --dts",
-    "stub": "tsup",
+    "build": "bun run gen && tsdown --clean --dts",
+    "gen": "bun scripts/typegen.ts && bun scripts/versiongen.ts",
+    "stub": "tsdown",
     "dev": "bunx @eslint/config-inspector --config eslint.config.js",
     "build:inspector": "bun run build && npx @eslint/config-inspector build",
-    "watch": "tsup --watch",
+    "watch": "tsdown --watch",
     "lint": "bunx --bun eslint .",
     "lint:fix": "bunx --bun eslint . --fix",
     "typegen": "bun scripts/typegen.ts",
@@ -91,7 +92,7 @@
     "lint-staged": "^15.5.0",
     "rimraf": "^6.0.1",
     "simple-git-hooks": "^2.12.1",
-    "tsup": "^8.4.0",
+    "tsdown": "^0.11.7",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2",
     "vitest": "^3.0.9",

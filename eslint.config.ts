@@ -3,6 +3,13 @@ import { stacks } from './src/'
 export default stacks(
   {
     vue: true,
+    vue: {
+      a11y: true,
+    },
+    react: true,
+    solid: true,
+    svelte: true,
+    astro: true,
     typescript: true,
     formatters: true,
     type: 'lib',
@@ -13,7 +20,11 @@ export default stacks(
   },
 
   {
-    ignores: ['fixtures', '_fixtures'],
+    ignores: [
+      'fixtures',
+      '_fixtures',
+      '**/constants-generated.ts',
+    ],
   },
 
   {

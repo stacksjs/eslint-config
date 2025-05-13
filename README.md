@@ -480,6 +480,57 @@ export default antfu()
 // ...
 ```
 
+### Vue
+
+Vue support is detected automatically by checking if `vue` is installed in your project. You can also explicitly enable/disable it:
+
+```js
+// eslint.config.js
+import stacks from '@stacksjs/eslint-config'
+
+export default stacks({
+  vue: true
+})
+```
+
+#### Vue 2
+
+We have limited support for Vue 2 (as it's already [reached EOL](https://v2.vuejs.org/eol/)). If you are still using Vue 2, you can configure it manually by setting `vueVersion` to `2`:
+
+```js
+// eslint.config.js
+import antfu from '@antfu/eslint-config'
+
+export default antfu({
+  vue: {
+    vueVersion: 2
+  },
+})
+```
+
+As it's in maintenance mode, we only accept bug fixes for Vue 2. It might also be removed in the future when `eslint-plugin-vue` drops support for Vue 2. We recommend upgrading to Vue 3 if possible.
+
+#### Vue Accessibility
+
+To enable Vue accessibility support, you need to explicitly turn it on:
+
+```js
+// eslint.config.js
+import antfu from '@antfu/eslint-config'
+
+export default antfu({
+  vue: {
+    a11y: true
+  },
+})
+```
+
+Running `npx eslint` should prompt you to install the required dependencies, otherwise, you can install them manually:
+
+```bash
+npm i -D eslint-plugin-vuejs-accessibility
+```
+
 ### Optional Configs
 
 We provide some optional configs for specific use cases, that we don't include their dependencies by default.

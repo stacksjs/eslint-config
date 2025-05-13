@@ -12,7 +12,7 @@ export type { FlatConfigComposer }
 
 export type Awaitable<T> = T | Promise<T>
 
-export type Rules = RuleOptions
+export interface Rules extends RuleOptions {}
 
 export type { ConfigNames }
 
@@ -51,6 +51,14 @@ export interface OptionsVue extends OptionsOverrides {
    * @default 3
    */
   vueVersion?: 3
+
+  /**
+   * Vue accessibility plugin. Help check a11y issue in `.vue` files upon enabled
+   *
+   * @see https://vue-a11y.github.io/eslint-plugin-vuejs-accessibility/
+   * @default false
+   */
+  a11y?: boolean
 }
 
 export type OptionsTypescript =
@@ -136,7 +144,7 @@ export interface OptionsComponentExts {
   componentExts?: string[]
 }
 
-export interface OptionsUnicorn {
+export interface OptionsUnicorn extends OptionsOverrides {
   /**
    * Include all rules recommended by `eslint-plugin-unicorn`, instead of only ones picked by Anthony.
    *
