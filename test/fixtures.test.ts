@@ -115,7 +115,7 @@ export default antfu(
 )
   `)
 
-    await execa('bunx', ['eslint', '.', '--fix'], {
+    await execa('npx', ['eslint', '.', '--fix'], {
       cwd: target,
       stdio: 'pipe',
     })
