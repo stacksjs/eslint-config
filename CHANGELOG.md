@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v4.14.0-beta.2...main
+
+[compare changes](https://github.com/stacksjs/eslint-config/compare/v4.14.0-beta.2...main)
+
+### 🏡 Chore
+
+- Add logging dep ([b9169db](https://github.com/stacksjs/eslint-config/commit/b9169db))
+- Wip ([78527ab](https://github.com/stacksjs/eslint-config/commit/78527ab))
+
+### ❤️ Contributors
+
+- Chris ([@chrisbbreuer](https://github.com/chrisbbreuer))
+
 ## v4.14.0-beta.1...main
 
 [compare changes](https://github.com/stacksjs/eslint-config/compare/v4.14.0-beta.1...main)
