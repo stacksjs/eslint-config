@@ -1,8 +1,8 @@
 import process from 'node:process'
 
 import * as p from '@clack/prompts'
+import { cli as cac } from '@stacksjs/clapp'
 import c from 'ansis'
-import { cac } from 'cac'
 
 import { version } from '../../package.json'
 import { run } from './run'

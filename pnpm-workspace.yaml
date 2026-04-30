@@ -46,12 +46,12 @@ catalogs:
     '@clack/prompts': ^0.10.1
     '@eslint-community/eslint-plugin-eslint-comments': ^4.5.0
     '@eslint/markdown': ^6.4.0
+    '@stacksjs/clapp': ^0.2.0
     '@stylistic/eslint-plugin': ^4.2.0
     '@typescript-eslint/eslint-plugin': ^8.32.1
     '@typescript-eslint/parser': ^8.32.1
     '@vitest/eslint-plugin': ^1.1.44
     ansis: ^4.0.0
-    cac: ^6.7.14
     eslint-config-flat-gitignore: ^2.1.0
     eslint-flat-config-utils: ^2.0.1
     eslint-merge-processors: ^2.0.0
